@@ -28,8 +28,10 @@ class CraftResultListener(
         val clickedInventory = event.clickedInventory
             ?: return
 
-        val brushResult = clickedInventory.find { it.type !in Constants.suspiciousMaterials }
-            ?: return
+        val brushResult = clickedInventory.find {
+            it.type !in Constants.suspiciousMaterials &&
+                it.type !in Constants.suspiciousMaterialsCounterparts.values
+        } ?: return
 
         val recipeResult = recipe.result.apply {
             NBT.modify(this) {

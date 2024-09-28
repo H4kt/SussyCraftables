@@ -6,9 +6,11 @@ object Constants {
 
     const val NBT_BRUSH_RESULT = "sussycraftables:brush_result"
 
-    val suspiciousMaterials = listOf(
-        Material.SUSPICIOUS_SAND,
-        Material.SUSPICIOUS_GRAVEL
+    val suspiciousMaterialsCounterparts = mapOf(
+        Material.SUSPICIOUS_SAND to Material.SAND,
+        Material.SUSPICIOUS_GRAVEL to Material.GRAVEL
     )
+
+    val suspiciousMaterials = suspiciousMaterialsCounterparts.keys
 
 }

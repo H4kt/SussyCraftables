@@ -1,6 +1,6 @@
 name: SussyCraftables
 main: dev.h4kt.sussycraftables.SussyCraftables
-version: 1.0
+version: ${version}
 api-version: 1.20
 depend: [NBTAPI]
 author: H4kt

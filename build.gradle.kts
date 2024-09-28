@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "dev.h4kt"
-version = "1.0"
+version = "1.1"
 
 repositories {
     mavenCentral()
@@ -18,4 +18,8 @@ dependencies {
 
 kotlin {
     jvmToolchain(21)
+}
+
+tasks.processResources {
+    expand(mapOf("version" to project.version))
 }
